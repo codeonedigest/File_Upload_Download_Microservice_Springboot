@@ -1,0 +1,65 @@
+{
+	"info": {
+		"_postman_id": "007ffd80-ce51-42c5-b1a4-5893225a8790",
+		"name": "Spring-Microservice-File-Upload-Download",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "2445867"
+	},
+	"item": [
+		{
+			"name": "uploadfile",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "",
+						"value": "",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "file",
+							"type": "file",
+							"src": "/C:/Users/hp/Pictures/Saved Pictures/Pawan.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8080/fileupload",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"fileupload"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DownloadFile",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/filedownload/Pawan.jpg",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"filedownload",
+						"Pawan.jpg"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
